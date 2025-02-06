@@ -48,3 +48,27 @@ function displayImages(photos) {
 
 // Initialize the app
 fetchImages();
+
+const userIcon = document.querySelector(".user-icon");
+const signupModal = document.getElementById("signupModal");
+const signupForm = document.getElementById("signupForm");
+const closeButton = signupModal.querySelector(".close-btn");
+const overlay = document.getElementById("overlay"); // Get the overlay
+
+function toggleSignupModal() {
+  signupModal.style.display =
+    signupModal.style.display === "block" ? "none" : "block";
+  overlay.style.display =
+    signupModal.style.display === "block" ? "block" : "none"; // Toggle overlay
+}
+
+userIcon.addEventListener("click", toggleSignupModal);
+closeButton.addEventListener("click", toggleSignupModal);
+overlay.addEventListener("click", toggleSignupModal); // Close on overlay click
+
+signupForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  toggleSignupModal(); // Close after submit (or after server response)
+  signupForm.reset();
+});

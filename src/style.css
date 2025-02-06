@@ -48,3 +48,75 @@
 .delay-500 {
   animation-delay: 500ms;
 }
+
+.signup-modal.show {
+  display: block;
+}
+.signup-modal input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.signup-modal button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.signup-modal .close-btn {
+  background-color: #dc3545;
+  margin-top: 10px;
+}
+.user-icon {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
+}
+
+.signup-modal {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center using transform */
+  z-index: 1001;
+  display: none;
+}
+
+.signup-modal input[type="text"]::placeholder,
+.signup-modal input[type="email"]::placeholder,
+.signup-modal input[type="password"]::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+.signup-modal input[type="text"],
+.signup-modal input[type="email"],
+.signup-modal input[type="password"] {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  width: 100%;
+  margin-bottom: 0.75rem;
+}

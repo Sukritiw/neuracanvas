@@ -8,29 +8,41 @@
   <link rel="stylesheet" href="./src/style.css" />
 </head>
 
-<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
-  <div id="app" class="container mx-auto px-4 py-8">
-    <!-- Header -->
-    <header class="text-center mb-12">
-      <h1 class="text-4xl font-bold animate-fade-in">NeuraCanvas</h1>
-      <p class="text-gray-600 dark:text-gray-400 mt-2 animate-fade-in delay-100">
-        Exploring the intersection of AI and creativity.
-      </p>
-      <!-- Dark/Light Mode Toggle -->
-      <button id="theme-toggle"
-        class="mt-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300">
-        <span class="dark:hidden">🌙</span>
-        <span class="hidden dark:inline">☀️</span>
-      </button>
-    </header>
+<body class="bg-red-300  text-gray-900 dark:text-white transition-colors duration-300"></body>
+<div id="app" class="container mx-auto px-4 py-8">
 
-    <!-- Gallery Grid -->
-    <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      <!-- Gallery items will be dynamically inserted here -->
+  <header class="mb-12">
+    <div class="flex justify-between items-center">
+      <div class="header-content">
+        <h1 class="text-4xl font-bold animate-fade-in">NeuraCanvas</h1>
+        <p class="dark:text-black mt-2 animate-fade-in delay-100">
+          Exploring the intersection of AI and creativity.
+        </p>
+      </div>
+      <div class="user-icon cursor-pointer text-2xl" onclick="toggleSignupModal()">👤</div>
     </div>
+
+    <div class="signup-modal" id="signupModal">
+      <h2>Sign Up</h2>
+      <form id="signupForm">
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+        <button type="button" class="close-btn" onclick="toggleSignupModal()">Close</button>
+      </form>
+    </div>
+
+  </header>
+
+  <!-- Gallery Grid -->
+  <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <!-- Gallery items will be dynamically inserted here -->
   </div>
 
-  <script type="module" src="./src/main.js"></script>
+
+</div>
+<script type="module" src="./src/main.js"></script>
 </body>
 
 </html>
