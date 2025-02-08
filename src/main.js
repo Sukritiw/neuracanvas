@@ -1,6 +1,6 @@
 // Unsplash API Key
 const API_KEY = "0jaW76GmV-xHvry-l-ivCaNWjKREObtswhbgk6cjke4"; // Replace with your Unsplash Access Key
-const BASE_URL = "https://api.unsplash.com/photos/random?count=12"; // Fetch 12 random images
+const BASE_URL = "https://api.unsplash.com/photos/random?count=20"; // Fetch 20 random images
 
 // DOM Elements
 const gallery = document.getElementById("gallery");

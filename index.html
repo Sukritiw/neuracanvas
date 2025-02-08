@@ -4,23 +4,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NeuraCanvas - AI Art Gallery</title>
+  <title>NeuraCanvas - Art Gallery</title>
   <link rel="stylesheet" href="./src/style.css" />
 </head>
 
-<body class="bg-red-300  text-gray-900 dark:text-white transition-colors duration-300"></body>
-<div id="app" class="container mx-auto px-4 py-8">
+<body class="bg-red-300  text-gray-900 dark:text-white transition-colors duration-300">
+  <div id="app" class="container mx-auto px-4 py-8">
 
-  <header class="mb-12">
-    <div class="flex justify-between items-center">
-      <div class="header-content">
-        <h1 class="text-4xl font-bold animate-fade-in">NeuraCanvas</h1>
-        <p class="dark:text-black mt-2 animate-fade-in delay-100">
-          Exploring the intersection of AI and creativity.
-        </p>
+    <header class="mb-12">
+      <div class="flex justify-between items-center">
+        <div class="header-content">
+          <h1 class="text-4xl font-bold animate-fade-in">NeuraCanvas</h1>
+          <p class="dark:text-black mt-2 animate-fade-in delay-100">Exploring the Captured Moments of Life</p>
+        </div>
+
+        <div class="flex items-center">
+          <div class="search-container border-1 rounded-xl border-black bg-white w-64 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 ml-2" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                clip-rule="evenodd" />
+            </svg>
+
+            <input type="text" placeholder="Search Artworks..."
+              class="w-full px-3 py-2 placeholder:text-gray-500 placeholder:opacity-75  rounded-md focus:ring-2 text-black z-10" />
+          </div>
+          <div class="user-icon cursor-pointer text-2xl ml-4" onclick="toggleSignupModal()">👤</div>
+        </div>
       </div>
-      <div class="user-icon cursor-pointer text-2xl" onclick="toggleSignupModal()">👤</div>
-    </div>
+    </header>
 
     <div class="signup-modal" id="signupModal">
       <h2>Sign Up</h2>
@@ -33,16 +46,14 @@
       </form>
     </div>
 
-  </header>
+    <!-- Gallery Grid -->
+    <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Gallery items will be dynamically inserted here -->
+    </div>
 
-  <!-- Gallery Grid -->
-  <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-    <!-- Gallery items will be dynamically inserted here -->
+
   </div>
-
-
-</div>
-<script type="module" src="./src/main.js"></script>
+  <script type="module" src="./src/main.js"></script>
 </body>
 
 </html>
